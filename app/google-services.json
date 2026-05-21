@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "767542666968",
+    "project_id": "sifrelikasam",
+    "storage_bucket": "sifrelikasam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767542666968:android:a434aec94df0e86004d9ad",
+        "android_client_info": {
+          "package_name": "com.example.sifrelikasam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaKr65Di8wN_s19-JbeXuioANGY8cOLaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

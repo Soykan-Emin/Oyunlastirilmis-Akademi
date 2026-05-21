@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_gradient"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <!-- Title & Subtitle Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tekrar Hoş Geldiniz"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Lütfen şifreli kasaya girmek için bilgilerinizi yazın"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:gravity="center" />
+
+            <!-- Glassmorphic Login Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/round_corner_buttom"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Oturum Aç"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Email Input -->
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/rounded_corner"
+                    android:hint="E-posta Adresi"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/text_secondary"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Password Input -->
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/rounded_corner"
+                    android:hint="Şifre"
+                    android:inputType="textPassword"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/text_secondary"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Remember Me & Forgot Password Row -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp">
+
+                    <CheckBox
+                        android:id="@+id/rememberMeCheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beni Hatırla"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:buttonTint="@color/cyan_accent"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/btnSifre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Şifremi Unuttun?"
+                        android:textColor="@color/cyan_accent"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <!-- Action Button -->
+                <Button
+                    android:id="@+id/btnOturumac"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/btn_cyan_accent"
+                    app:backgroundTint="@color/cyan_accent"
+                    android:text="Oturum Aç"
+                    android:textColor="@color/deep_purple"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Google Sign In Button Divider -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/glass_white_border" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ya da "
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:layout_marginHorizontal="8dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/glass_white_border" />
+                </LinearLayout>
+
+                <!-- Google Button Wrapper -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="10dp">
+
+                        <ImageView
+                            android:id="@+id/google_sign_in_button"
+                            android:layout_width="140dp"
+                            android:layout_height="32dp"
+                            app:srcCompat="@drawable/google"
+                            android:scaleType="fitCenter" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Signup Prompt -->
+            <TextView
+                android:id="@+id/btnUyeol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Hesabın yok mu? Şimdi Kaydol"
+                android:textColor="@color/cyan_accent"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Deprecated items retained as tiny invisible items to avoid compilation crashes -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

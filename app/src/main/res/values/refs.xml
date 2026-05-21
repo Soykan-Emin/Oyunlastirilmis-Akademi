@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="intro_image1" />
+    <drawable name="intro_image2" />
+    <drawable name="intro_image3" />
+    <drawable name="image1" />
+    <drawable name="image2" />
+    <drawable name="image3" />
+    <drawable name="one" />
+    <drawable name="two" />
+    <drawable name="three" />
+</resources>

@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://tools.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_gradient"
+    tools:context=".GunlukBonusActivity">
+
+    <!-- Top Premium Status Header -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Günlük Bonus"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_corner"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView23"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/diamond" />
+
+            <TextView
+                android:id="@+id/txtelmas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="2300"
+                android:textColor="@color/gold_accent"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <!-- Rewards Information glass card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_buttom"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Elmas Ödülleri"
+                    android:textColor="@color/cyan_accent"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ 20000 ELMAS: İşten Yarımsaat Erken Çık"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🕒 15000 ELMAS: Öğle Molasını Yarımsaat Uzat"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Hamster clicker screen container -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lythamster"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:background="@drawable/round_corner_buttom"
+                android:layout_marginBottom="24dp">
+
+                <!-- Hamster combat replica assets centering -->
+                <ImageView
+                    android:id="@+id/btnyuvarlak"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:padding="12dp"
+                    android:src="@drawable/hamsteryuvarlak" />
+
+                <ImageView
+                    android:id="@+id/btnhamster1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:padding="32dp"
+                    android:src="@drawable/hamster1" />
+
+                <ImageView
+                    android:id="@+id/btnhamster2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:padding="32dp"
+                    android:visibility="gone"
+                    android:src="@drawable/hamster" />
+
+                <ImageView
+                    android:id="@+id/btnhamster3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:padding="32dp"
+                    android:visibility="gone"
+                    android:src="@drawable/hamster2" />
+
+                <!-- floating tap reward indicator text -->
+                <TextView
+                    android:id="@+id/txtartibir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+1"
+                    android:textColor="@color/cyan_accent"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Clicker Energy Display row -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/lightning" />
+
+                <TextView
+                    android:id="@+id/txtenerji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="5000/5000"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Math Game Container -->
+            <LinearLayout
+                android:id="@+id/lytMathGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_buttom"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zihin Egzersizi: Hızlı Matematik"
+                    android:textColor="@color/cyan_accent"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toplam 5 soru, her doğru cevap 2 Elmas. Toplam 10 Elmas!"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtMathQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Başlamak için tıkla"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/lytMathOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginBottom="16dp">
+                    
+                    <Button
+                        android:id="@+id/btnMathOpt1"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rounded_corner"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                        
+                    <Button
+                        android:id="@+id/btnMathOpt2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnMathStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/btn_cyan_accent"
+                    android:text="Oyunu Başlat"
+                    android:textColor="@color/deep_purple"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Color Game Container -->
+            <LinearLayout
+                android:id="@+id/lytColorGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_buttom"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refleks Testi: Renk Yanılsaması"
+                    android:textColor="@color/cyan_accent"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yazıya değil, YAZININ RENGİNE tıkla! 5 soru, toplam 10 Elmas!"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtColorQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Başlamak için tıkla"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/lytColorOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginBottom="16dp">
+                    
+                    <Button
+                        android:id="@+id/btnColorOpt1"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rounded_corner"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                        
+                    <Button
+                        android:id="@+id/btnColorOpt2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnColorStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/btn_cyan_accent"
+                    android:text="Oyunu Başlat"
+                    android:textColor="@color/deep_purple"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- IQ Game Container -->
+            <LinearLayout
+                android:id="@+id/lytIqGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_buttom"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zorlu IQ Testi: Kayıp Sayı"
+                    android:textColor="@color/cyan_accent"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Örüntüyü çöz! Her doğru cevap 4 Elmas. Toplam 5 Soru (20 Elmas)"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtIqQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Başlamak için tıkla"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/lytIqOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginBottom="16dp">
+                    
+                    <Button
+                        android:id="@+id/btnIqOpt1"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rounded_corner"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                        
+                    <Button
+                        android:id="@+id/btnIqOpt2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnIqStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/btn_cyan_accent"
+                    android:text="Zorlu Testi Başlat"
+                    android:textColor="@color/deep_purple"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Quest panel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_buttom"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/txtkalansuregunlukbonus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kalan Süre: 24 saat"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:id="@+id/btngunlukgorev"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/btn_cyan_accent"
+                    android:text="Günlük Görevi Başlat"
+                    android:textColor="@color/deep_purple"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Öğle yemeği saatinde yapılır (12:00-12:50)"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Unified Glassmorphic Bottom Navigation Bar -->
+    <RelativeLayout
+        android:id="@+id/bottomNavigationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/round_corner_buttom"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Home Tab -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btnAnasayfa"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/home"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/txtAnaSayfa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Ana Sayfa"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!-- Category Tab -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btnKategori"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/kategori"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/txtKategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Kategori"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!-- Bonus Tab (Active) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btnGunluk"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/heart"
+                    app:tint="@color/cyan_accent" />
+
+                <TextView
+                    android:id="@+id/txtGunluk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Günlük Bonus"
+                    android:textColor="@color/cyan_accent"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Profile Tab -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btnProfil"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/user"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/txtProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Profil"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Retaining deprecated components in tiny invisible bounds to avoid compile errors -->
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/btnAnasayfa1"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/btnKategori1"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/btnGunluk1"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/btnProfil1"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
